@@ -1,0 +1,15 @@
+Client: Main client form which will be made later
+FileTransferSender: Class which will be used to send files
+FileTransferReceiver: Class which will be used to receive binary files
+ImageClass: A class which contains details of images and how to take screen shots
+RemoteDesktop: Nothing special
+Server: Main server form which will be made later
+SocketClass: Has some stuff about sockets (Not that important)
+SocketListener: Class with socket for receiving text data
+SocketSender: Class with socket for sending text data
+TextFileReadeR: Class implements easy to use interface for reading text files
+TextFileWriter: Class implements easy to use interface for writing text files
+consoleClient: Test for console implmentable classes
+consoleServer: Test for console implementable classes
+testClient: TEST FOR UI implmentable classes
+testServer: Test for UI implementable classes
