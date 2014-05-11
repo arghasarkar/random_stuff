@@ -3,8 +3,6 @@ package remotedesktop.transferWork;
 /*
  * @author ARGHA SARKAR
  */
-
-import remotedesktop.transferWork.SocketListener;
 import java.io.*;
 import java.net.*;
 

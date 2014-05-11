@@ -4,7 +4,6 @@ package remotedesktop.transferWork;
  * @author ARGHA SARKAR
  */
 
-import remotedesktop.transferWork.SocketSender;
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.File;
