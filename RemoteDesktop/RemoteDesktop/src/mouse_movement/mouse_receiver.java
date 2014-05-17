@@ -10,7 +10,9 @@ public class mouse_receiver {
     
     //SETS THE HOST NAME AND PORT NUMBER
     private static int port_number = 4321;
-    private static String host_name = "127.0.0.1";
+    private static String host_name = "192.168.0.2";
+    
+    public mouse_receiver() { }
     
     public mouse_receiver(String host, int port) {
         port_number = port;
@@ -33,7 +35,7 @@ public class mouse_receiver {
         host_name = host;
     }
     
-    public int start_receiver() {
+    public void start_receiver() {
         int mouse_x = 0, mouse_y = 0;
         String[] mouse_coordinates = new String[2];
         while (true) {
@@ -49,13 +51,12 @@ public class mouse_receiver {
                 r.mouseMove(mouse_x, mouse_y);
             } catch (AWTException ex) {
                 System.err.println(ex.getMessage());
-                return -1;                                                      //ERROR
+                                                                     //ERROR
             }
-            System.out.println(message);
-            return 0;                                                           //EVERYTHING IS OK
+            System.out.println(message);                                                          //EVERYTHING IS OK
         }
     }
-    
+    /*
     public static void main(String[] args) throws AWTException {
         
         int mouse_x = 0, mouse_y = 0;
@@ -73,5 +74,5 @@ public class mouse_receiver {
             System.out.println(message);
         }
     }
-    
+    */
 }
