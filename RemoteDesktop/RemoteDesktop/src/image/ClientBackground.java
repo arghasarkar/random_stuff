@@ -11,7 +11,7 @@ import java.util.TimerTask;
 
 public class ClientBackground {
     
-    private String host = "192.168.0.8";
+    private String host = "127.0.0.1";
     private int port = 8000;
             
     private int timerInterval = 1000;

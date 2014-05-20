@@ -118,8 +118,7 @@ public class backgroundtest extends javax.swing.JFrame {
                 System.out.println(testCount++ + "hii2");
             }
         }, 0, useDelay);
-            
-        
+     
     }//GEN-LAST:event_jButton1MouseClicked
     
     public void updateGraphics() {

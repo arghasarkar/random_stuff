@@ -7,7 +7,10 @@ public class mouse_server extends javax.swing.JFrame {
     private boolean server_is_on = false;                                       //USED TO SEE WHEN THE SERVER IS ON
     private String host = "";                                                   //HOST
     private int port = 0;                                                       //PORT NUMBER
-   
+    
+    mouse_sender ms = new mouse_sender();                                       //DECLARES AND INITIALISES THE MOUSE SENDER CLASS
+    Thread t = new Thread();
+    
     public mouse_server() {
         initComponents();
     }
@@ -84,16 +87,21 @@ public class mouse_server extends javax.swing.JFrame {
         host = jTextField1.getText();
         port = Integer.parseInt(jTextField2.getText());
         
-        mouse_sender ms = new mouse_sender(host, port);
+        ms.set_port(port);
+        ms.set_host(host);
+        
+        t = new Thread(ms);
         
         if (server_is_on == false) {
             jButton1.setText("Stop");
             server_is_on = true;
-            ms.start_sender();
+            t.run();
+            //ms.start_sender();
         } else {
             jButton1.setText("Start");
             server_is_on = false;
-            ms = null;
+            t.run();
+            //ms.stop_sender();
         }
         
     }//GEN-LAST:event_jButton1MouseClicked

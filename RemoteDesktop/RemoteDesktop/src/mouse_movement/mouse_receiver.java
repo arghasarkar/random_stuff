@@ -2,15 +2,14 @@ package mouse_movement;
 
 import java.awt.AWTException;
 import java.awt.Robot;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 import remotedesktop.transferWork.SocketListener;
 
 public class mouse_receiver {
     
     //SETS THE HOST NAME AND PORT NUMBER
     private static int port_number = 4321;
-    private static String host_name = "192.168.0.2";
+    private static String host_name = "127.0.0.1";
     
     public mouse_receiver() { }
     
@@ -56,7 +55,7 @@ public class mouse_receiver {
             System.out.println(message);                                                          //EVERYTHING IS OK
         }
     }
-    /*
+    
     public static void main(String[] args) throws AWTException {
         
         int mouse_x = 0, mouse_y = 0;
@@ -74,5 +73,5 @@ public class mouse_receiver {
             System.out.println(message);
         }
     }
-    */
+    
 }
